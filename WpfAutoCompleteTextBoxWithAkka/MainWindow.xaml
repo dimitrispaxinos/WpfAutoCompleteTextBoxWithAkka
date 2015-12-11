@@ -15,7 +15,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBox Grid.Row="0" Text="{Binding AutoCompleteTextBoxViewModel.SearchedText, UpdateSourceTrigger=PropertyChanged, Delay=200}"/>
+        <TextBox Grid.Row="0" Text="{Binding AutoCompleteTextBoxViewModel.SearchedText, UpdateSourceTrigger=PropertyChanged}"/>
         <ListBox  Grid.Row="1"  ItemsSource="{Binding AutoCompleteTextBoxViewModel.AvailableItems}"/>
     </Grid>
 </Window>

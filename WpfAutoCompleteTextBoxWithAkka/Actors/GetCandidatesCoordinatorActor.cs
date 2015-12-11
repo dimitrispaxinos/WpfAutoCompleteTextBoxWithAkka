@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 using Akka.Actor;
+
+using WpfAutoCompleteTextBoxWithAkka.ViewModels;
 
 namespace WpfAutoCompleteTextBoxWithAkka.Actors
 {
     public class GetCandidatesCoordinatorActor<T> : ReceiveActor
     {
+        #region Messages
+
         public class CandidatesResults<T>
         {
             public IEnumerable<T> Results { get; private set; }
@@ -34,19 +35,19 @@ namespace WpfAutoCompleteTextBoxWithAkka.Actors
             public string TextToMatch { get; private set; }
         }
 
+        #endregion
+
         private readonly Func<string, Task<IEnumerable<T>>> _itemGetter;
 
+        private readonly AutoCompleteTextBoxViewModelBase<T> _viewModel;
         private IActorRef _worker;
-        //private T SelectedItem;
-        private ObservableCollection<T> AvailableItems;
 
-
-        public GetCandidatesCoordinatorActor(ObservableCollection<T> availableItems, Func<string, Task<IEnumerable<T>>> itemGetter)
+        public GetCandidatesCoordinatorActor(AutoCompleteTextBoxViewModelBase<T> viewModel, Func<string, Task<IEnumerable<T>>> itemGetter)
         {
             _itemGetter = itemGetter;
             _worker = Context.ActorOf(Props.Create(() => new GetCandidatesWorkerActor<T>(_itemGetter)));
             //SelectedItem = selectedItem;
-            AvailableItems = availableItems;
+            _viewModel = viewModel;
 
             Receive<CandidatesResults<T>>(res => UpdateItems(res));
             Receive<InitializeSearch>(res => Search(res.TextToMatch));
@@ -55,7 +56,7 @@ namespace WpfAutoCompleteTextBoxWithAkka.Actors
         private void UpdateItems(CandidatesResults<T> res)
         {
             if (res.Results != null)
-                AvailableItems = new ObservableCollection<T>(res.Results);
+                _viewModel.AvailableItems = new ObservableCollection<T>(res.Results);
         }
 
         public void Search(string searchText)

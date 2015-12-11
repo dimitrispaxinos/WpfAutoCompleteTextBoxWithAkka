@@ -64,7 +64,7 @@
     </ApplicationDefinition>
     <Compile Include="Actors\GetCandidatesCoordinatorActor.cs" />
     <Compile Include="Actors\GetCandidatesWorkerActor.cs" />
-    <Compile Include="AutoCompleteTextBoxViewModel.cs" />
+    <Compile Include="ViewModels\AutoCompleteTextBoxViewModel.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -75,8 +75,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AutoCompleteTextBoxViewModelBase.cs" />
-    <Compile Include="MainViewModel.cs" />
+    <Compile Include="ViewModels\AutoCompleteTextBoxViewModelBase.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
