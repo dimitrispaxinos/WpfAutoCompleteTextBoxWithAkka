@@ -1,0 +1,14 @@
+c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\bin\Debug\WpfAutoCompleteTextBoxWithAkka.exe.config
+c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\bin\Debug\WpfAutoCompleteTextBoxWithAkka.exe
+c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\bin\Debug\WpfAutoCompleteTextBoxWithAkka.pdb
+c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka.csprojResolveAssemblyReference.cache
+c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\MainWindow.g.cs
+c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\App.g.cs
+c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka_MarkupCompile.cache
+c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka_MarkupCompile.lref
+c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\MainWindow.baml
+c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka.g.resources
+c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka.Properties.Resources.resources
+c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka.csproj.GenerateResource.Cache
+c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka.exe
+c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka.pdb
