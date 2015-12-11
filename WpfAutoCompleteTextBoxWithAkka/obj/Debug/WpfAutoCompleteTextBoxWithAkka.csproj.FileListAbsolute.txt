@@ -12,3 +12,9 @@ c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAk
 c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka.csproj.GenerateResource.Cache
 c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka.exe
 c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka.pdb
+c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\bin\Debug\Akka.dll
+c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\bin\Debug\Newtonsoft.Json.dll
+c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\bin\Debug\Akka.xml
+c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\bin\Debug\Newtonsoft.Json.xml
+c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\GeneratedInternalTypeHelper.g.cs
+c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\App.baml

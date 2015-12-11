@@ -1,78 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace WpfAutoCompleteTextBoxWithAkka
 {
-    public class AutoCompleteTextBoxViewModel<T> : ViewModelBase where T : class
+    public class AutoCompleteTextBoxViewModel : AutoCompleteTextBoxViewModelBase<string>
     {
-        private readonly Func<string, Task<IEnumerable<T>>> _itemGetter;
-        private T _itemToBeSet;
+        public AutoCompleteTextBoxViewModel(string itemToBeSet)
+            : base(itemToBeSet)
+        {
+        }
 
+        public override async Task<IEnumerable<string>> GetItems(string text)
+        {
+            var list = new List<string>();
+            list.Add("Item1");
+            list.Add("Item2");
+            list.Add("Item3");
+            list.Add("Item4");
+            list.Add("Item5");
+            await Task.Delay(2000);
+            return list;
+        }
         
-        public AutoCompleteTextBoxViewModel(T itemToBeSet, Func<string, Task<IEnumerable<T>>> itemGetter)
-        {
-            _itemToBeSet = itemToBeSet;
-            _itemGetter = itemGetter;
-        }
-
-        private T _selectedItem;
-        public T SelectedItem
-        {
-            get
-            {
-                return _selectedItem;
-            }
-            set
-            {
-                if (_selectedItem != value)
-                {
-                    _selectedItem = value;
-                    SendPropertyChanged(() => SelectedItem);
-                }
-            }
-        }
-
-        private ObservableCollection<T> _availableItems;
-        public ObservableCollection<T> AvailableItems
-        {
-            get
-            {
-                return _availableItems;
-            }
-            set
-            {
-                if (_availableItems != value)
-                {
-                    _availableItems = value;
-                    SendPropertyChanged(() => AvailableItems);
-                }
-            }
-        }
-
-        private string _searchedText;
-
-        public string SearchedText
-        {
-            get
-            {
-                return _searchedText;
-            }
-            set
-            {
-                if (_searchedText != value)
-                {
-                    _searchedText = value;
-                    SendPropertyChanged(()=>SearchedText);
-                    GetCandidates(SearchedText);
-                }
-            }
-        }
-
-        private void GetCandidates(string searchedText)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
