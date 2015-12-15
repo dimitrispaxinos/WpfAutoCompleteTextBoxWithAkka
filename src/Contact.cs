@@ -15,11 +15,11 @@ namespace WpfAutoCompleteTextBoxWithAkka
         public static IEnumerable<Contact> GetContacts()
         {
             var contacts = new List<Contact>();
-            contacts.Add(new Contact() { FirstName = "Dimitris", LastName = "Paxinos" });
-            contacts.Add(new Contact() { FirstName = "Sebastian", LastName = "Braune" });
-            contacts.Add(new Contact() { FirstName = "Ingo", LastName = "Strauch" });
-            contacts.Add(new Contact() { FirstName = "Manuel", LastName = "Saegebrecht" });
-            contacts.Add(new Contact() { FirstName = "Vladimir", LastName = "Tasic" });
+            contacts.Add(new Contact() { FirstName = "Steve", LastName = "Jobs" });
+            contacts.Add(new Contact() { FirstName = "John", LastName = "Doe" });
+            contacts.Add(new Contact() { FirstName = "Muster", LastName = "Mustermann" });
+            contacts.Add(new Contact() { FirstName = "Albert", LastName = "Einstein" });
+            contacts.Add(new Contact() { FirstName = "Bill", LastName = "Gates" });
             
             return contacts;
         }

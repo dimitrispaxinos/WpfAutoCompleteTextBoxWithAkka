@@ -6,10 +6,9 @@
         xmlns:local="clr-namespace:WpfAutoCompleteTextBoxWithAkka"
         mc:Ignorable="d"
         DataContext="{StaticResource MainViewModel}"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" Background="LightBlue">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -23,7 +22,7 @@
                                    SelectedItem="{Binding SelectedContact, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                    IsLoading="{Binding AutoCompleteTextBoxContactViewModel.IsLoading, UpdateSourceTrigger=PropertyChanged}"/>
 
-        <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="dklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjklj"/>
-        <TextBox Grid.Row="2" Background="Red"></TextBox>
+        <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Okay, so I needed a very simple and clean loading animation for a multi threaded application I was working on to notify the user that something was in the process of being loaded.  So of course the first place I looked was Google, because I figured someone else has already written one and I could save myself some time by just using theirs.  Well, after almost an hour searching, I found nothing.  So much for being a timesaver.  Now, don't get me wrong, I found a couple of WPF animations out there, but none of them really fit what I needed.  So I just decided to bite the bullet and create my own.  After creating the animation I decided to share the fruits of my labor so that anyone else who is looking for the same thing I was, or something similar, wouldn't have as much trouble as I did."/>
+        
     </Grid>
 </Window>

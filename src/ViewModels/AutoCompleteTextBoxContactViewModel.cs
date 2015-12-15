@@ -8,7 +8,7 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
     {
         public async override Task<IEnumerable<Contact>> GetItems(string text)
         {
-            await Task.Delay(2000);
+            await Task.Delay(1500);
             return Contact.GetContacts().Where(x => x.LastName.ToLower().Contains(text.ToLower()));
         }
     }

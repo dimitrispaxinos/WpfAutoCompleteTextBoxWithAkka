@@ -1,4 +1,5 @@
-﻿<UserControl x:Class="WpfAutoCompleteTextBoxWithAkka.LoadingControl.LoadingAnimation"
+﻿ <!--Taken from http://elegantcode.com/2009/08/21/a-simple-wpf-loading-animation/-->
+<UserControl x:Class="WpfAutoCompleteTextBoxWithAkka.LoadingControl.LoadingAnimation"
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
             xmlns:local="clr-namespace:WpfAutoCompleteTextBoxWithAkka.LoadingControl"
