@@ -14,7 +14,7 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
 
         public async override Task<IEnumerable<Contact>> GetItems(string text)
         {
-            return Contact.GetContacts().Where(x => x.LastName.StartsWith(text, true, CultureInfo.InvariantCulture));
+            return Contact.GetContacts().Where(x => x.LastName.ToLower().Contains(text.ToLower()));
         }
     }
 }

@@ -20,6 +20,8 @@ namespace WpfAutoCompleteTextBoxWithAkka
             contacts.Add(new Contact() { FirstName = "Ingo", LastName = "Strauch" });
             contacts.Add(new Contact() { FirstName = "Manuel", LastName = "Saegebrecht" });
             contacts.Add(new Contact() { FirstName = "Vladimir", LastName = "Tasic" });
+            
+            return contacts;
         }
 
     }
