@@ -1,7 +1,6 @@
 c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\bin\Debug\WpfAutoCompleteTextBoxWithAkka.exe.config
 c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\bin\Debug\WpfAutoCompleteTextBoxWithAkka.exe
 c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\bin\Debug\WpfAutoCompleteTextBoxWithAkka.pdb
-c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka.csprojResolveAssemblyReference.cache
 c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\MainWindow.g.cs
 c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\App.g.cs
 c:\users\gdp1\documents\visual studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka_MarkupCompile.cache
@@ -18,3 +17,6 @@ c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAk
 c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\bin\Debug\Newtonsoft.Json.xml
 c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\GeneratedInternalTypeHelper.g.cs
 c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\App.baml
+c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\AutoCompleteTextBox.baml
+c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\AutoCompleteTextBox.g.cs
+C:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka.csprojResolveAssemblyReference.cache

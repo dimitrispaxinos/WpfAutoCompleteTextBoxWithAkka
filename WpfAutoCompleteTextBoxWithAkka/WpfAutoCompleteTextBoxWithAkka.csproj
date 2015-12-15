@@ -64,8 +64,17 @@
     </ApplicationDefinition>
     <Compile Include="Actors\GetCandidatesCoordinatorActor.cs" />
     <Compile Include="Actors\GetCandidatesWorkerActor.cs" />
+    <Compile Include="AutoCompleteTextBox.xaml.cs">
+      <DependentUpon>AutoCompleteTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.cs" />
+    <Compile Include="ViewModels\AutoCompleteTextBoxContactViewModel.cs" />
     <Compile Include="ViewModels\AutoCompleteTextBoxViewModel.cs" />
     <Compile Include="ViewModelBase.cs" />
+    <Page Include="AutoCompleteTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -10,12 +10,15 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBox Grid.Row="0" Text="{Binding AutoCompleteTextBoxViewModel.SearchedText, UpdateSourceTrigger=PropertyChanged}"/>
-        <ListBox  Grid.Row="1"  ItemsSource="{Binding AutoCompleteTextBoxViewModel.AvailableItems}"/>
+        <local:AutoCompleteTextBox Grid.Row="0" QueryString="{Binding AutoCompleteTextBoxViewModel.SearchedText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                   ItemsSource="{Binding AutoCompleteTextBoxViewModel.AvailableItems, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="dklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjklj"/>
+        <TextBox Grid.Row="2" Background="Red"></TextBox>
     </Grid>
 </Window>
