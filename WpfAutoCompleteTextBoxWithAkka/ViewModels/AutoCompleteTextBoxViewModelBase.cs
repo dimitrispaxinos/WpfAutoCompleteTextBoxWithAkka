@@ -10,34 +10,14 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
 {
     public abstract class AutoCompleteTextBoxViewModelBase<T> : ViewModelBase //where T : class
     {
-        private T _itemToBeSet;
         private IActorRef _getCandidatesCoordinatorActor;
 
-
-        protected AutoCompleteTextBoxViewModelBase(T itemToBeSet)
+        protected AutoCompleteTextBoxViewModelBase()
         {
-            _itemToBeSet = itemToBeSet;
             _getCandidatesCoordinatorActor =
                 ActorData.ActorSystem.ActorOf(
                     Props.Create(() => new GetCandidatesCoordinatorActor<T>(this, GetItems))
                         .WithDispatcher("akka.actor.synchronized-dispatcher"), ActorData.ActorPaths.GetCandidatesCoordinatorActor.Name);
-        }
-
-        private T _selectedItem;
-        public T SelectedItem
-        {
-            get
-            {
-                return _selectedItem;
-            }
-            set
-            {
-                //if (_selectedItem != value)
-                //{
-                _selectedItem = value;
-                SendPropertyChanged(() => SelectedItem);
-                //}
-            }
         }
 
         private ObservableCollection<T> _availableItems;
@@ -57,30 +37,57 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
             }
         }
 
-        private string _searchedText;
-        public string SearchedText
+        private string _queryText;
+        public string QueryText
         {
             get
             {
-                return _searchedText;
+                return _queryText;
             }
             set
             {
-                if (_searchedText != value)
+                if (_queryText != value)
                 {
-                    _searchedText = value;
-                    SendPropertyChanged(() => SearchedText);
-                    GetCandidates(SearchedText);
+                    _queryText = value;
+                    SendPropertyChanged(() => QueryText);
+                    GetCandidates(QueryText);
                 }
             }
         }
 
         private void GetCandidates(string searchedText)
         {
-            if (!string.IsNullOrEmpty(searchedText)) _getCandidatesCoordinatorActor.Tell(new GetCandidatesCoordinatorActor<T>.InitializeSearch(searchedText));
-            else AvailableItems = null;
+            if (!string.IsNullOrEmpty(searchedText))
+            {
+                _getCandidatesCoordinatorActor.Tell(new GetCandidatesCoordinatorActor<T>.InitializeSearch(searchedText));
+                CallsInProgress++;
+            }
+            else 
+                AvailableItems = null;
         }
 
         public abstract Task<IEnumerable<T>> GetItems(string text);
+
+        private int _callsInProgress;
+        public int CallsInProgress
+        {
+            get
+            {
+                return _callsInProgress;
+            }
+            set
+            {
+                _callsInProgress = value;
+                SendPropertyChanged(() => CallsInProgress);
+                SendPropertyChanged(() => IsLoading);
+            }
+        }
+
+
+        public bool IsLoading
+        {
+            get { return CallsInProgress>0}
+        }
+
     }
 }

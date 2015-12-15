@@ -16,10 +16,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <!--<local:AutoCompleteTextBox Grid.Row="0" QueryString="{Binding AutoCompleteTextBoxViewModel.SearchedText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                   ItemsSource="{Binding AutoCompleteTextBoxViewModel.AvailableItems, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>-->
-
-        <local:AutoCompleteTextBox Grid.Row="0" QueryString="{Binding AutoCompleteTextBoxContactViewModel.SearchedText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        <local:AutoCompleteTextBox Grid.Row="0" QueryString="{Binding AutoCompleteTextBoxContactViewModel.QueryText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Delay=500}"
                                    ItemsSource="{Binding AutoCompleteTextBoxContactViewModel.AvailableItems, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                    DisplayMemberPath="LastName" 
                                    SelectedValuePath="LastName"

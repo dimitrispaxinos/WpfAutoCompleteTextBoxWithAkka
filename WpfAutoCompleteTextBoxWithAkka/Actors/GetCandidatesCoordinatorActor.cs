@@ -46,7 +46,6 @@ namespace WpfAutoCompleteTextBoxWithAkka.Actors
         {
             _itemGetter = itemGetter;
             _worker = Context.ActorOf(Props.Create(() => new GetCandidatesWorkerActor<T>(_itemGetter)));
-            //SelectedItem = selectedItem;
             _viewModel = viewModel;
 
             Receive<CandidatesResults<T>>(res => UpdateItems(res));
@@ -55,7 +54,11 @@ namespace WpfAutoCompleteTextBoxWithAkka.Actors
 
         private void UpdateItems(CandidatesResults<T> res)
         {
-            if (res.Results != null)
+            // Decrease number of calls
+            _viewModel.CallsInProgress--;
+
+            // Check if there are any results and that the query text is the same as requested
+            if (res.Results != null && _viewModel.QueryText == res.TextToMatch)
                 _viewModel.AvailableItems = new ObservableCollection<T>(res.Results);
         }
 

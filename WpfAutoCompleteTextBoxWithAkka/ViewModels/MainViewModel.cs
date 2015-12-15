@@ -27,7 +27,7 @@
         public MainViewModel()
         {
             //AutoCompleteTextBoxViewModel = new AutoCompleteTextBoxViewModel(null);
-            AutoCompleteTextBoxContactViewModel = new AutoCompleteTextBoxContactViewModel(null);
+            AutoCompleteTextBoxContactViewModel = new AutoCompleteTextBoxContactViewModel();
         }
     }
 }
