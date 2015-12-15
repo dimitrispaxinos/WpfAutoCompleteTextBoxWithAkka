@@ -67,11 +67,26 @@
     <Compile Include="AutoCompleteTextBox.xaml.cs">
       <DependentUpon>AutoCompleteTextBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BoolToVisibilityConverter.cs" />
     <Compile Include="Contact.cs" />
+    <Compile Include="LoadingControl\Block.xaml.cs">
+      <DependentUpon>Block.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingControl\LoadingAnimation.xaml.cs">
+      <DependentUpon>LoadingAnimation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\AutoCompleteTextBoxContactViewModel.cs" />
     <Compile Include="ViewModels\AutoCompleteTextBoxViewModel.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Page Include="AutoCompleteTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoadingControl\Block.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoadingControl\LoadingAnimation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

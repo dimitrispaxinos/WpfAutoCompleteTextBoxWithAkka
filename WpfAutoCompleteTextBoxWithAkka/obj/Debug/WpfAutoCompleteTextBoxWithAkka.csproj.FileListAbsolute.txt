@@ -20,3 +20,7 @@ c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAk
 c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\AutoCompleteTextBox.baml
 c:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\AutoCompleteTextBox.g.cs
 C:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\WpfAutoCompleteTextBoxWithAkka.csprojResolveAssemblyReference.cache
+C:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\LoadingControl\Block.baml
+C:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\LoadingControl\Block.g.cs
+C:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\LoadingControl\LoadingAnimation.g.cs
+C:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\WpfAutoCompleteTextBoxWithAkka\obj\Debug\LoadingControl\LoadingAnimation.baml

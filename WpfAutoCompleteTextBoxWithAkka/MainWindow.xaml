@@ -20,7 +20,8 @@
                                    ItemsSource="{Binding AutoCompleteTextBoxContactViewModel.AvailableItems, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                    DisplayMemberPath="LastName" 
                                    SelectedValuePath="LastName"
-                                   SelectedItem="{Binding SelectedContact, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                   SelectedItem="{Binding SelectedContact, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                   IsLoading="{Binding AutoCompleteTextBoxContactViewModel.IsLoading, UpdateSourceTrigger=PropertyChanged}"/>
 
         <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="dklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjkljdklajdklasjklj"/>
         <TextBox Grid.Row="2" Background="Red"></TextBox>
