@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,6 +20,10 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
             await Task.Delay(2000);
             return list.Where(x=>x.ToLower().Contains(text));
         }
-        
+
+        public AutoCompleteTextBoxViewModel(Func<string> getSelectedItem)
+            : base(getSelectedItem)
+        {
+        }
     }
 }

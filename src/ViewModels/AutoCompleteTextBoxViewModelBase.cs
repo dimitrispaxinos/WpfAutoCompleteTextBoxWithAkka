@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 
@@ -8,12 +9,15 @@ using WpfAutoCompleteTextBoxWithAkka.Actors;
 
 namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
 {
-    public abstract class AutoCompleteTextBoxViewModelBase<T> : ViewModelBase 
+    public abstract class AutoCompleteTextBoxViewModelBase<T> : ViewModelBase
     {
         private readonly IActorRef _getCandidatesCoordinatorActor;
+        // Using a func to get the selected item instead of a reference that could be null
+        private readonly Func<T> _getSelectedItem;
 
-        protected AutoCompleteTextBoxViewModelBase()
+        protected AutoCompleteTextBoxViewModelBase(Func<T> getSelectedItem)
         {
+            _getSelectedItem = getSelectedItem;
             _getCandidatesCoordinatorActor =
                 ActorData.ActorSystem.ActorOf(
                     Props.Create(() => new GetCandidatesCoordinatorActor<T>(this, GetItems))
@@ -78,7 +82,7 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
                     GetCandidates(QueryText);
                 }
             }
-        } 
+        }
 
         #endregion
 
@@ -92,6 +96,10 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
 
         private void GetCandidates(string searchedText)
         {
+            // if there is already a selected item, then we do not have to search again
+            if (_getSelectedItem() != null)
+                return;
+
             if (!string.IsNullOrEmpty(searchedText))
             {
                 _getCandidatesCoordinatorActor.Tell(new GetCandidatesCoordinatorActor<T>.InitializeSearch(searchedText));

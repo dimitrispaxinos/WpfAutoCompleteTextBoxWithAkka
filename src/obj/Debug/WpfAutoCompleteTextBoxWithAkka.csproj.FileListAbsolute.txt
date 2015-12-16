@@ -59,7 +59,6 @@ C:\Github\WpfAutoCompleteTextBoxWithAkka\src\bin\Debug\Akka.dll
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\bin\Debug\Newtonsoft.Json.dll
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\bin\Debug\Akka.xml
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\bin\Debug\Newtonsoft.Json.xml
-C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.csprojResolveAssemblyReference.cache
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\LoadingControl\Block.baml
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\AutoCompleteTextBox.g.cs
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\LoadingControl\Block.g.cs

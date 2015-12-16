@@ -6,7 +6,6 @@
 
         public AutoCompleteTextBoxContactViewModel AutoCompleteTextBoxContactViewModel { get; set; }
 
-
         private Contact _selectedContact;
         public Contact SelectedContact
         {
@@ -23,7 +22,7 @@
 
         public MainViewModel()
         {
-            AutoCompleteTextBoxContactViewModel = new AutoCompleteTextBoxContactViewModel();
+            AutoCompleteTextBoxContactViewModel = new AutoCompleteTextBoxContactViewModel(() => SelectedContact);
         }
     }
 }
