@@ -8,9 +8,9 @@ using WpfAutoCompleteTextBoxWithAkka.Actors;
 
 namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
 {
-    public abstract class AutoCompleteTextBoxViewModelBase<T> : ViewModelBase //where T : class
+    public abstract class AutoCompleteTextBoxViewModelBase<T> : ViewModelBase 
     {
-        private IActorRef _getCandidatesCoordinatorActor;
+        private readonly IActorRef _getCandidatesCoordinatorActor;
 
         protected AutoCompleteTextBoxViewModelBase()
         {
@@ -19,6 +19,8 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
                     Props.Create(() => new GetCandidatesCoordinatorActor<T>(this, GetItems))
                         .WithDispatcher("akka.actor.synchronized-dispatcher"), ActorData.ActorPaths.GetCandidatesCoordinatorActor.Name);
         }
+
+        #region  Properties
 
         private ObservableCollection<T> _availableItems;
         public ObservableCollection<T> AvailableItems
@@ -36,37 +38,6 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
                 }
             }
         }
-
-        private string _queryText;
-        public string QueryText
-        {
-            get
-            {
-                return _queryText;
-            }
-            set
-            {
-                if (_queryText != value)
-                {
-                    _queryText = value;
-                    SendPropertyChanged(() => QueryText);
-                    GetCandidates(QueryText);
-                }
-            }
-        }
-
-        private void GetCandidates(string searchedText)
-        {
-            if (!string.IsNullOrEmpty(searchedText))
-            {
-                _getCandidatesCoordinatorActor.Tell(new GetCandidatesCoordinatorActor<T>.InitializeSearch(searchedText));
-                CallsInProgress++;
-            }
-            else 
-                AvailableItems = null;
-        }
-
-        public abstract Task<IEnumerable<T>> GetItems(string text);
 
         private int _callsInProgress;
         public int CallsInProgress
@@ -89,6 +60,45 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
             {
                 return CallsInProgress > 0;
             }
+        }
+
+        private string _queryText;
+        public string QueryText
+        {
+            get
+            {
+                return _queryText;
+            }
+            set
+            {
+                if (_queryText != value)
+                {
+                    _queryText = value;
+                    SendPropertyChanged(() => QueryText);
+                    GetCandidates(QueryText);
+                }
+            }
+        } 
+
+        #endregion
+
+        /// <summary>
+        /// Implement the data retrieval. Call a service to get the 
+        /// data and act apuon them perhaps
+        /// </summary>
+        /// <param name="text">This is the Query Text</param>
+        /// <returns></returns>
+        public abstract Task<IEnumerable<T>> GetItems(string text);
+
+        private void GetCandidates(string searchedText)
+        {
+            if (!string.IsNullOrEmpty(searchedText))
+            {
+                _getCandidatesCoordinatorActor.Tell(new GetCandidatesCoordinatorActor<T>.InitializeSearch(searchedText));
+                CallsInProgress++;
+            }
+            else
+                AvailableItems = null;
         }
     }
 }
