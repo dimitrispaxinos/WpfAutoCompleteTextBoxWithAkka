@@ -16,17 +16,13 @@
             }
             set
             {
-                //if (_selectedContact != value)
-                //{
                 _selectedContact = value;
                 SendPropertyChanged(() => SelectedContact);
-                //}
             }
         }
 
         public MainViewModel()
         {
-            //AutoCompleteTextBoxViewModel = new AutoCompleteTextBoxViewModel(null);
             AutoCompleteTextBoxContactViewModel = new AutoCompleteTextBoxContactViewModel();
         }
     }

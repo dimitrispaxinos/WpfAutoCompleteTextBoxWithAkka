@@ -83,7 +83,6 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
             }
         }
 
-
         public bool IsLoading
         {
             get
@@ -91,6 +90,5 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
                 return CallsInProgress > 0;
             }
         }
-
     }
 }
