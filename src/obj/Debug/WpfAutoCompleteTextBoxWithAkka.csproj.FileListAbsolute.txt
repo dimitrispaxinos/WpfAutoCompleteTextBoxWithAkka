@@ -75,3 +75,4 @@ C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\MainWindow.baml
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.g.resources
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.Properties.Resources.resources
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.csproj.GenerateResource.Cache
+C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.csprojResolveAssemblyReference.cache

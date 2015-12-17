@@ -75,8 +75,6 @@
     <Compile Include="LoadingControl\LoadingAnimation.xaml.cs">
       <DependentUpon>LoadingAnimation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\AutoCompleteTextBoxContactViewModel.cs" />
-    <Compile Include="ViewModels\AutoCompleteTextBoxViewModel.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Page Include="AutoCompleteTextBox.xaml">
       <SubType>Designer</SubType>
@@ -99,7 +97,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModels\AutoCompleteTextBoxViewModelBase.cs" />
+    <Compile Include="ViewModels\AutoCompleteTextBoxViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

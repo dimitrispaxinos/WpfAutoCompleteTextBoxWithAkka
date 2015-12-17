@@ -39,10 +39,10 @@ namespace WpfAutoCompleteTextBoxWithAkka.Actors
 
         private readonly Func<string, Task<IEnumerable<T>>> _itemGetter;
 
-        private readonly AutoCompleteTextBoxViewModelBase<T> _viewModel;
+        private readonly AutoCompleteTextBoxViewModel<T> _viewModel;
         private IActorRef _worker;
 
-        public GetCandidatesCoordinatorActor(AutoCompleteTextBoxViewModelBase<T> viewModel, Func<string, Task<IEnumerable<T>>> itemGetter)
+        public GetCandidatesCoordinatorActor(AutoCompleteTextBoxViewModel<T> viewModel, Func<string, Task<IEnumerable<T>>> itemGetter)
         {
             _itemGetter = itemGetter;
             _worker = Context.ActorOf(Props.Create(() => new GetCandidatesWorkerActor<T>(_itemGetter)));
