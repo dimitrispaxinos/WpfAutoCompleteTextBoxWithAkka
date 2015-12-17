@@ -75,6 +75,7 @@
     <Compile Include="LoadingControl\LoadingAnimation.xaml.cs">
       <DependentUpon>LoadingAnimation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NonTopMostPopUp.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Page Include="AutoCompleteTextBox.xaml">
       <SubType>Designer</SubType>

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -84,11 +85,43 @@ namespace WpfAutoCompleteTextBoxWithAkka
 
         #endregion
 
+
+
+
         public AutoCompleteTextBox()
         {
             InitializeComponent();
             PART_TextBox.LostFocus += PartTextBoxLostFocus;
             PART_TextBox.GotFocus += PartTextBoxGotFocus;
+            Loaded += ViewLoaded;
+        }
+
+        // Fix ToolTips relative position
+        // Found here:http://stackoverflow.com/questions/1600218/how-can-i-move-a-wpf-popup-when-its-anchor-element-moves
+        private void ViewLoaded(object sender, RoutedEventArgs e)
+        {
+            Window w = Window.GetWindow(PART_TextBox);
+            // w should not be Null now!
+            if (null != w)
+            {
+                w.LocationChanged += delegate (object sender2, EventArgs args)
+                {
+                    var offset = PART_Popup.HorizontalOffset;
+                    // "bump" the offset to cause the popup to reposition itself
+                    //   on its own
+                    PART_Popup.HorizontalOffset = offset + 1;
+                    PART_Popup.HorizontalOffset = offset;
+                };
+                // Also handle the window being resized (so the popup's position stays
+                //  relative to its target element if the target element moves upon 
+                //  window resize)
+                w.SizeChanged += delegate (object sender3, SizeChangedEventArgs e2)
+                {
+                    var offset = PART_Popup.HorizontalOffset;
+                    PART_Popup.HorizontalOffset = offset + 1;
+                    PART_Popup.HorizontalOffset = offset;
+                };
+            }
         }
 
         private void PartTextBoxGotFocus(object sender, RoutedEventArgs e)
