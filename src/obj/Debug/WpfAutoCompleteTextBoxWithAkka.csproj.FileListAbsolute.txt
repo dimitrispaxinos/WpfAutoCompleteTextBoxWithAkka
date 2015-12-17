@@ -51,8 +51,6 @@ C:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAk
 C:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.Properties.Resources.resources
 C:\Users\gdp1\Documents\Visual Studio 2015\Projects\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.csproj.GenerateResource.Cache
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\bin\Debug\WpfAutoCompleteTextBoxWithAkka.exe.config
-C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.exe
-C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.pdb
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\bin\Debug\WpfAutoCompleteTextBoxWithAkka.exe
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\bin\Debug\WpfAutoCompleteTextBoxWithAkka.pdb
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\bin\Debug\Akka.dll
@@ -75,4 +73,5 @@ C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\MainWindow.baml
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.g.resources
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.Properties.Resources.resources
 C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.csproj.GenerateResource.Cache
-C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.csprojResolveAssemblyReference.cache
+C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.exe
+C:\Github\WpfAutoCompleteTextBoxWithAkka\src\obj\Debug\WpfAutoCompleteTextBoxWithAkka.pdb
