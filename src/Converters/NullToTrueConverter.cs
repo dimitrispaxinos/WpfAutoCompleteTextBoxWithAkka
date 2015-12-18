@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Globalization;
-using System.Windows;
 using System.Windows.Data;
 
-namespace WpfAutoCompleteTextBoxWithAkka
+namespace WpfAutoCompleteTextBoxWithAkka.Converters
 {
-    public class BoolToVisibilityConverter : IValueConverter
+    public class NullToTrueConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var boolValue = value as bool?;
-
-            return boolValue != true ? Visibility.Collapsed : Visibility.Visible;
+            return value == null;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

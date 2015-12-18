@@ -30,7 +30,7 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
         // Mehtod to be passed at the creation of the AutoCompleteTextBoxContactViewModel for data retrieval
         public async Task<IEnumerable<Contact>> GetItems(string text)
         {
-            await Task.Delay(1500);
+            await Task.Delay(500);
             return Contact.GetContacts().Where(x => x.LastName.ToLower().Contains(text.ToLower()));
         }
     }

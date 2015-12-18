@@ -67,7 +67,8 @@
     <Compile Include="AutoCompleteTextBox.xaml.cs">
       <DependentUpon>AutoCompleteTextBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\BooleanAndConverter.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="LoadingControl\Block.xaml.cs">
       <DependentUpon>Block.xaml</DependentUpon>
@@ -75,8 +76,9 @@
     <Compile Include="LoadingControl\LoadingAnimation.xaml.cs">
       <DependentUpon>LoadingAnimation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NonTopmostPopup.cs" />
-    <Compile Include="ViewModelBase.cs" />
+    <Compile Include="Converters\NullToFalseConverter.cs" />
+    <Compile Include="Converters\NullToTrueConverter.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
     <Page Include="AutoCompleteTextBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

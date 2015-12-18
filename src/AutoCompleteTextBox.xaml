@@ -6,23 +6,29 @@
              Name="Ctrl">
     <Grid Name="MainGrid" Background="White">
         <!--<Border BorderThickness="0" BorderBrush="Transparent">-->
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+        <Grid Height="20" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
             <TextBox Grid.Column="0" BorderThickness="0"  Name="PART_TextBox"  Text="{Binding ElementName=Ctrl, Path=QueryString, UpdateSourceTrigger=PropertyChanged}" 
                      Background="Transparent" VerticalAlignment="Center" BorderBrush="Transparent"
                      PreviewKeyDown="PART_TextBox_OnKeyDown" TextChanged="PART_TextBox_OnTextChanged"
                      ToolTip="{Binding ElementName=Ctrl, Path=ToolTip}"/>
-                <Viewbox Grid.Column="1" Width="20" Height="20"
+            <Viewbox Grid.Column="1" Width="20" Margin="3,3,3,3"
                          Visibility="{Binding ElementName=Ctrl, Path=IsLoading, Converter={StaticResource BoolToVisibilityConverter}}">
-                    <loadingControl:LoadingAnimation />
-                </Viewbox>
-            </Grid>
-        <wpfAutoCompleteTextBoxWithAkka:NonTopmostPopup x:Name="PART_Popup" HorizontalAlignment="Left" VerticalAlignment="Center" AllowsTransparency="True"
+                <loadingControl:LoadingAnimation />
+            </Viewbox>
+        </Grid>
+        <Popup x:Name="PART_Popup" HorizontalAlignment="Left" VerticalAlignment="Center" AllowsTransparency="True" StaysOpen="False"
                Width="{Binding ElementName=MainGrid, Path=ActualWidth}" Height="120" Opacity="0.7">
-            <!--Opacity="0.8"-->
+            <Popup.IsOpen>
+                <MultiBinding Mode="OneWay" Converter="{StaticResource BooleanAndConverter}">
+                    <Binding ElementName="Ctrl " Path="ItemsSource" Converter="{StaticResource NullToFalseConverter}"/>
+                    <Binding ElementName="Ctrl" Path="SelectedItem" Converter="{StaticResource NullToTrueConverter}"  />
+                    <Binding ElementName="PART_TextBox" Path="IsFocused"/>
+                </MultiBinding>
+            </Popup.IsOpen>
             <ListBox x:Name="PART_ListBox" HorizontalContentAlignment="Stretch"  Background="White" Opacity="0.9"
                      FontSize="15" FontWeight="SemiBold" 
                      IsSynchronizedWithCurrentItem="False"
@@ -30,6 +36,6 @@
                      DisplayMemberPath="{Binding ElementName=Ctrl, Path=DisplayMemberPath}" 
                      SelectedValuePath="{Binding ElementName=Ctrl, Path=SelectedValuePath}" 
                      SelectionChanged="PART_ListBox_OnSelectionChanged"/>
-        </wpfAutoCompleteTextBoxWithAkka:NonTopmostPopup>
+        </Popup>
     </Grid>
 </UserControl>

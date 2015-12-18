@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 
-namespace WpfAutoCompleteTextBoxWithAkka
+namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
 {
         /// <summary>
         /// Base Class for the ViewModel which includes all components, which are necessary for all possible ViewModel classes
