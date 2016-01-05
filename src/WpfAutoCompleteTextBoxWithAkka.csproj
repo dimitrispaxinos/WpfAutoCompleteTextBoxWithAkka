@@ -67,9 +67,11 @@
     <Compile Include="AutoCompleteTextBox.xaml.cs">
       <DependentUpon>AutoCompleteTextBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ContactService.cs" />
     <Compile Include="Converters\BooleanAndConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Contact.cs" />
+    <Compile Include="IContactService.cs" />
     <Compile Include="LoadingControl\Block.xaml.cs">
       <DependentUpon>Block.xaml</DependentUpon>
     </Compile>

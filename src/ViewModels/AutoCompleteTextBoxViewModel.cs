@@ -18,7 +18,7 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
         /// <summary>
         /// Creating the AutoCompleteTextBoxViewModel 
         /// </summary>
-        /// <param name="getSelectedItem">Func to return the item to be set oecn you select an item from the list</param>
+        /// <param name="getSelectedItem">Func to return the item to be set once you select an item from the list</param>
         /// <param name="getItems">Func fetching the availalbe items based on the supplied query text</param>
         public AutoCompleteTextBoxViewModel(Func<T> getSelectedItem, Func<string, Task<IEnumerable<T>>> getItems)
         {

@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
+﻿namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
+        private readonly IContactService _contactService;
         public AutoCompleteTextBoxViewModel<Contact> AutoCompleteTextBoxContactViewModel { get; set; }
 
         private Contact _selectedContact;
@@ -24,14 +21,13 @@ namespace WpfAutoCompleteTextBoxWithAkka.ViewModels
 
         public MainViewModel()
         {
-            AutoCompleteTextBoxContactViewModel = new AutoCompleteTextBoxViewModel<Contact>(() => SelectedContact, GetItems);
-        }
-
-        // Mehtod to be passed at the creation of the AutoCompleteTextBoxContactViewModel for data retrieval
-        public async Task<IEnumerable<Contact>> GetItems(string text)
-        {
-            await Task.Delay(500);
-            return Contact.GetContacts().Where(x => x.LastName.ToLower().Contains(text.ToLower()));
+            // An IContactService Implementation would normally be injected in the real world using an IOC Container. 
+            _contactService = new ContactService();
+            
+            // Create an AutoCompleteTextViewModel for the Contact
+            AutoCompleteTextBoxContactViewModel = new AutoCompleteTextBoxViewModel<Contact>(
+                () => SelectedContact,
+                _contactService.GetContactsByLastName);
         }
     }
 }

@@ -10,20 +10,33 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="4"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <local:AutoCompleteTextBox Grid.Row="0" QueryString="{Binding AutoCompleteTextBoxContactViewModel.QueryText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Delay=500}"
+
+        <Label Grid.Row="0" Grid.Column="0">Last Name</Label>
+        <local:AutoCompleteTextBox Grid.Row="0" Grid.Column="2"
+                                   QueryString="{Binding AutoCompleteTextBoxContactViewModel.QueryText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Delay=500}"
                                    ItemsSource="{Binding AutoCompleteTextBoxContactViewModel.AvailableItems, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                    DisplayMemberPath="LastName" 
                                    SelectedValuePath="LastName"
                                    SelectedItem="{Binding SelectedContact, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                    IsLoading="{Binding AutoCompleteTextBoxContactViewModel.IsLoading, UpdateSourceTrigger=PropertyChanged}"/>
 
-        <TextBox Grid.Row="1" TextWrapping="Wrap" Background="Transparent"
-                 Text="Okay, so I needed a very simple and clean loading animation for a multi threaded application I was working on to notify the user that something was in the process of being loaded.  So of course the first place I looked was Google, because I figured someone else has already written one and I could save myself some time by just using theirs.  Well, after almost an hour searching, I found nothing.  So much for being a timesaver.  Now, don't get me wrong, I found a couple of WPF animations out there, but none of them really fit what I needed.  So I just decided to bite the bullet and create my own.  After creating the animation I decided to share the fruits of my labor so that anyone else who is looking for the same thing I was, or something similar, wouldn't have as much trouble as I did."/>
+        <Label Grid.Row="1" Grid.Column="0">First Name</Label>
+        <TextBox Grid.Row="1" Grid.Column="2" IsEnabled="False" Text="{Binding SelectedContact.FirstName}"/>
+
+        <Label Grid.Row="2" Grid.Column="0">Email</Label>
+        <TextBox Grid.Row="2" Grid.Column="2" IsEnabled="False" Text="{Binding SelectedContact.Email}"/>
+
+        <Label Grid.Row="3" Grid.Column="0">City</Label>
+        <TextBox Grid.Row="3" Grid.Column="2" IsEnabled="False" Text="{Binding SelectedContact.City}"/>
         
     </Grid>
 </Window>
